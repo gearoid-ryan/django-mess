@@ -1,0 +1,73 @@
+
+
+.nav  {
+  display: inline;
+}
+
+.jumbotron {
+  background-image:url('http://www.yourdublinyourvoice.ie/sites/default/files/header/bones/Dublin-View.jpg');
+  height: 500px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+
+.jumbotron .container {
+  position: relative;
+  top:20px;
+}
+
+.jumbotron h1 {
+  color: #fff;
+  font-size: 48px;  
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  color: #fff;
+}
+
+.jumbotron a {
+  font-family: 'Shift', sans-serif;
+  font-weight: bold;
+  color: white;
+  
+}
+
+
+.learn-more {
+  background-color: #f7f7f7;
+}
+
+.learn-more h3 {
+  font-family: 'Shift', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.learn-more a {
+  color: #00b0ff;
+}
+
+.neighborhood-guides {
+    background-color:#efefef;
+    border-bottom:1px solid #dbdbde;
+}
+
+.neighborhood-guides p{
+     font-size:15px;
+    margin-bottom: 13px;
+}
+
+.neighborhood-guides h2{
+    color:#393c3d;
+    font-size:24px;
+}
+
+.neighborhood-guides row{
+   display:inline;
+}

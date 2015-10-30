@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    {% load staticfiles %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'welcomeapp/codeacademy.css' %}" />
+    
+    
+    
+  </head>
+
+  <body>
+
+    
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          {% load staticfiles %}
+          <a class="navbar-brand" href="#"><img src="{% static "welcomeapp/home_icon.jpg" %}" alt = "can't find" width="20" height = "30"></a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#">Browse</a></li> 
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a></li> 
+            
+            <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li> 
+            
+            <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li> 
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Complex Finance made Easy</h1>
+        <p>Value and moniter your portfolio in real time.</p>
+        <a href="#">Learn More</a>
+      </div>
+    </div>
+    
+    <div class = "neighborhood-guides">
+        <div class = "container">
+            <h2>Start here...</h2>
+            <p>Whether you are managing risk, sourcing profit or understanding your portfolio, our custom built tools are here to help.</p>
+            
+            <div class = "row">
+                <div class ="col-md-3">
+                    <div class="thumbnail">
+                        <img src="http://www.options-intelligence.com/wp-content/uploads/2013/02/option-trading-history.jpg">
+                    </div>
+                </div>
+                <div class ="col-md-3">
+                    <div class="thumbnail">
+                        <img src="http://www.forexbetter.com/wp-content/uploads/2014/09/como-escolher-corretora-forex.png">
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        
+    </div>
+
+    <div class="learn-more">
+	  <div class="container">
+		<div class = "row">
+	      <div class="col-md-4">
+			<h3>Valuations</h3>
+			<p>Our real-time valuations software is quick and accurate, and will allow you easily upload and view you trades</p>
+			<p><a href="#">See how to add a portfolio</a></p>
+	      </div>
+		  <div class="col-md-4">
+			<h3>Reporting</h3>
+			<p>Our IACC compliant reporting tools allow you to quickly and automatically satisfy reporting regulations in multiple justisdictions</p>
+			<p><a href="#">Take a look at our reports</a></p>
+		  </div>
+		  <div class="col-md-4">
+			<h3>Monitering</h3>
+			<p>Portfolio sensitivities constantly updated and delivered to your your handset via our desktop application</p></p>
+			<p><a href="#">Download our desktop monitoring tool here</a></p>
+		  </div>
+	    </div>
+	  </div>
+	</div>
+  </body>
+</html>
