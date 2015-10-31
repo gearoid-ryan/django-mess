@@ -34,13 +34,13 @@
             <li><a href="#">Browse</a></li> 
             
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right">           
             
-            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a></li> 
+            <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li> 
             
             <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li> 
             
-            <li><a href="#"><span class="glyphicon glyphicon-wrench"></span> Settings</a></li> 
+            <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a></li> 
             
           </ul>
         </div>
@@ -61,15 +61,22 @@
             <p>Whether you are managing risk, sourcing profit or understanding your portfolio, our custom built tools are here to help.</p>
             
             <div class = "row">
-                <div class ="col-md-3">
+                <div class ="col-md-2">
+                    
+                </div>
+                
+                <div class ="col-md-4">
                     <div class="thumbnail">
-                        <a href = "{% url 'tradeviewer'%}" ><img src="http://www.options-intelligence.com/wp-content/uploads/2013/02/option-trading-history.jpg"></a>
+                        <a href = "{% url 'tradeviewer:index' %}" ><img src="http://www.options-intelligence.com/wp-content/uploads/2013/02/option-trading-history.jpg"></a>
                     </div>
                 </div>
-                <div class ="col-md-3">
+                <div class ="col-md-4">
                     <div class="thumbnail">
                         <img src="http://www.forexbetter.com/wp-content/uploads/2014/09/como-escolher-corretora-forex.png">
                     </div>
+                </div>
+                <div class ="col-md-2">
+                    
                 </div>
 
                 
