@@ -6,5 +6,5 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("List of trades here")
+    return render(request, 'tradeviewer/index.html')
     

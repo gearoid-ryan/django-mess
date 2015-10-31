@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        {% load staticfiles %}
+        
+        
+        
+        
+        <link rel="stylesheet" href="{% static 'tradeviewer/bootstrap.min.css' %}">
+        
+        <link rel="stylesheet" href="{% static 'tradeviewer/main.css' %}">
+        
+        
+        <script src="{% static 'tradeviewer/bootstrap.min.js' %}"></script>
+        
+      
+        <script src="{% static 'tradeviewer/jquery.min.js' %}"></script>
+        
+        
+        
+        
+        <!--------------------------------------------------------------------------------------
+        <!--
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+       
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        -->
+        <!-------------------------------------------------------------------------------------->
+        
+        <!--
+        <link rel="stylesheet" href="{% static 'tradeviewer/bootstrap-table.min.css' %}">
+
+        
+        <script src="{% static 'tradeviewer/bootstrap-table.min.js' %}"></script>
+
+        
+        
+        <script src="{% static 'tradeviewer/bootstrap-table-zh-CN.min.js' %}"></script>
+        -->
+        
+        
+        
+            
+    </head>
+    
+    <body>
+    
+        <div>
+        
+            <div class="container">
+            
+                <table class="table table-striped table-bordered table-pos">
+                
+                    <thead>
+                        <tr>
+                            
+                            <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
+                            <th data-field="name" data-align="center" data-sortable="true">Trade Type</th>
+                            <th data-field="price" data-sortable="true" data-sorter="priceSorter">Maturity</th>
+                            <th data-field="price" data-sortable="true" data-sorter="priceSorter">Value</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            
+                            <td>1</td>
+                            <td>Swap1</td>
+                            <td>1/1/2017</td>
+                            <td>$1</td>
+                        </tr>
+                        <tr>   
+                            <td>2</td>
+                            <td>Swap2</td>
+                            <td>1/1/2017</td>
+                            <td>$1</td>
+                        </tr>
+                        <tr>  
+                            <td>3</td>
+                            <td>Swap3</td>
+                            <td>1/1/2017</td>
+                            <td>$1</td>
+                        </tr>
+                        <tr>  
+                            <td>4</td>
+                            <td>Swap4</td>
+                            <td>1/1/2017</td>
+                            <td>$1</td>
+                        </tr>
+                        <tr>  
+                            <td>5</td>
+                            <td>Swap5</td>
+                            <td>1/1/2017</td>
+                            <td>$1</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                
+            </div>
+            
+        </div>
+        
+    </body>
+
+</html>
