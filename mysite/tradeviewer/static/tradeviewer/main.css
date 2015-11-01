@@ -1,12 +1,32 @@
+.navbar.navbar-inverse  {
+  width:100%;
+  display:inline;
+  position:fixed;
+  top:0;
+  left:0;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border: 0px;
+  z-index:99
+  
+}
+
+.add-rem-buttons {
+    
+    padding-top:20px;
+    }
+
+
 
 .table-pos{
-   margin-top:100px
+   margin-top:60px
     
     }
     
     
 .new-button{
-   position:fixed;
+   position:relative;
+   margin-top: 50px;
    margin-left: 110px;
     
     }

@@ -1,20 +1,48 @@
 var main=function(){
 
-    $(document).keypress(function(event){
+    $('.description').hide();
     
-        if(event.which===65){
+    
+    $('a.view').click(function(){
+    
+        if( $(this).text()==="Detailed View"){
         
-
-            $('tbody').append("<tr><td>5</td><td>Swap5</td><td>1/1/2017</td><td>$1</td></tr>");
+        
+        
+            $('td.description').show();
+            $('th.description').show();
+            $(this).text("Summary View");
             
-        }
-        else if(event.which===82){
+        } else{
         
-            $('tbody tr#last').remove();
+            $('td.description').hide();
+            $('th.description').hide();
+            
+            $(this).text("Detailed View");
             
         };
-         
         
+        
+    
+    
+    });
+
+    $('a.btn-success').click( function(){
+    
+        $('tbody').append("<tr><td>5</td><td>Swap5</td><td>1/1/2017</td><td>$1</td><td class=\"description\">Some stupid description</td></tr>");
+        if( $('a.view').text()==="Detailed View"){
+            $('td.description').hide();
+        } else{
+            $('th.description').show();
+        };
+            
+    });
+        
+    $('a.btn-danger').click( function(){
+       
+        
+        $('tbody tr:last').remove();
+            
     });
 
 };

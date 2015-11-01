@@ -4,18 +4,19 @@
     <head> 
         {% load staticfiles %}
         
-        
-        
-        
-        <link rel="stylesheet" href="{% static 'tradeviewer/bootstrap.min.css' %}">
-        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>        
+
+
+        <script type="text/javascript" src="{% static 'tradeviewer/jquery.leanModal.min.js' %}"></script>
+
         <link rel="stylesheet" href="{% static 'tradeviewer/main.css' %}">
-        
-        
-        <script src="{% static 'tradeviewer/bootstrap.min.js' %}"></script>
-        
-      
-        <script src="{% static 'tradeviewer/jquery.min.js' %}"></script>
         
         
         
@@ -44,12 +45,48 @@
         <script src="{% static 'tradeviewer/bootstrap-table-zh-CN.min.js' %}"></script>
         -->
         
-        
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              {% load staticfiles %}
+              <a class="navbar-brand" href="#"><img src="{% static "welcomeapp/home_icon.jpg" %}" alt = "can't find" width="20" height = "30"></a>
+            </div>
+            <div>
+              <ul class="nav navbar-nav">
+                <li ><a href="{% url 'home:index' %}">Home</a></li>
+                <li class="active"><a href="{% url 'tradeviewer:index' %}">Browse Trades</a></li> 
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right">           
+                
+                <li><a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li> 
+                
+                <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li> 
+                
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a></li> 
+                
+              </ul>
+            </div>
+          </div>
+        </nav>        
         
             
     </head>
     
     <body>
+    
+    
+        <div class="new-button add-rem-buttons">
+     
+            <div class="continer">
+            
+                <a href="#" class="btn btn-success">Add Trade</a>
+                <a href="#" class="btn btn-danger">Remove Trade</a>
+                <a href="#" class="btn btn-default view">Detailed View</a>
+                
+            </div>
+        
+        </div>
     
         <div>
         
@@ -60,10 +97,11 @@
                     <thead>
                         <tr>
                             
-                            <th data-field="id" data-align="right" data-sortable="true">Item ID</th>
+                            <th data-field="id" data-align="right" data-sortable="true">Trade ID</th>
                             <th data-field="name" data-align="center" data-sortable="true">Trade Type</th>
                             <th data-field="price" data-sortable="true" data-sorter="priceSorter">Maturity</th>
                             <th data-field="price" data-sortable="true" data-sorter="priceSorter">Value</th>
+                            <th class="description" data-field="price" data-sortable="true" data-sorter="priceSorter">The gorey details</th>
                         </tr>
                     </thead>
                     
@@ -74,30 +112,36 @@
                             <td>Swap1</td>
                             <td>1/1/2017</td>
                             <td>$1</td>
+                            <td class="description">Some stupid description</td>
+                            
                         </tr>
                         <tr>   
                             <td>2</td>
                             <td>Swap2</td>
                             <td>1/1/2017</td>
                             <td>$1</td>
+                            <td class="description">Some stupid description</td>
                         </tr>
                         <tr>  
                             <td>3</td>
                             <td>Swap3</td>
                             <td>1/1/2017</td>
                             <td>$1</td>
+                            <td class="description">Some stupid description</td>
                         </tr>
                         <tr>  
                             <td>4</td>
                             <td>Swap4</td>
                             <td>1/1/2017</td>
                             <td>$1</td>
+                            <td class="description">Some stupid description</td>
                         </tr>
                         <tr>  
                             <td>5</td>
                             <td>Swap5</td>
                             <td>1/1/2017</td>
                             <td>$1</td>
+                            <td class="description">Some stupid description</td>
                         </tr>
                     </tbody>
                 </table>
@@ -106,6 +150,11 @@
             </div>
             
         </div>
+        
+     
+     
+    
+    <script src="{% static 'tradeviewer/myscript.js' %}"></script>
         
     </body>
 
