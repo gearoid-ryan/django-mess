@@ -7,4 +7,5 @@ app_name = 'welcomeapp'
 urlpatterns = [
    
     url(r'^', views.index, name='index'),
+    
 ]

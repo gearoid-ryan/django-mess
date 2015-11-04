@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+    <head> 
+        {% load staticfiles %}
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>        
+
+
+        <script type="text/javascript" src="{% static 'tradeviewer/jquery.leanModal.min.js' %}"></script>
+
+        <link rel="stylesheet" href="{% static 'tradeviewer/main.css' %}">
+        
+        
+        
+        
+        <!--------------------------------------------------------------------------------------
+        <!--
+        
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+      
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+       
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        -->
+        <!-------------------------------------------------------------------------------------->
+        
+        <!--
+        <link rel="stylesheet" href="{% static 'tradeviewer/bootstrap-table.min.css' %}">
+
+        
+        <script src="{% static 'tradeviewer/bootstrap-table.min.js' %}"></script>
+
+        
+        
+        <script src="{% static 'tradeviewer/bootstrap-table-zh-CN.min.js' %}"></script>
+        -->
+        
+        <nav class="navbar navbar-inverse">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              {% load staticfiles %}
+              <a class="navbar-brand" href="#"><img src="{% static "welcomeapp/home_icon.jpg" %}" alt = "can't find" width="20" height = "30"></a>
+            </div>
+            <div>
+              <ul class="nav navbar-nav">
+                <li ><a href="{% url 'home:index' %}">Home</a></li>
+                <li class="active"><a href="{% url 'tradeviewer:index' %}">Browse Trades</a></li> 
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right">           
+                
+                <li><a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a></li> 
+                
+                <li><a href="#"><span class="glyphicon glyphicon-question-sign"></span> Help</a></li> 
+                
+                <li><a href="#"><span class="glyphicon glyphicon-log-out"></span>Sign Out</a></li> 
+                
+              </ul>
+            </div>
+          </div>
+        </nav>        
+        
+            
+    </head>
+    
+    <body>
+    
+    
+        <div class="new-button add-rem-buttons">
+     
+            <div class="continer">
+            
+                <a href="#" class="btn btn-success">Add Trade</a>
+                <a href="#" class="btn btn-danger">Remove Trade</a>
+                <a href="#" class="btn btn-default view">Detailed View</a>
+                
+            </div>
+        
+        </div>
+    
+        <div>
+        
+            <div class="container">
+            
+                <table class="table table-striped table-bordered table-pos">
+                
+                    <thead>
+                        <tr>
+                            
+                            <th data-field="id" data-align="right" data-sortable="true">Trade ID</th>
+                            <th data-field="name" data-align="center" data-sortable="true">Trade Type</th>
+                            <th data-field="price" data-sortable="true" data-sorter="priceSorter">Maturity</th>
+                            <th data-field="price" data-sortable="true" data-sorter="priceSorter">Value</th>
+                            <th class="description" data-field="price" data-sortable="true" data-sorter="priceSorter">The gorey details</th>
+                        </tr>
+                    </thead>
+                    
+                    {% if trade_list %}
+                        <tbody>
+                            {% for trade in trade_list %}
+                                <tr>
+                                    
+                                    <td>{{trade.trade_id}}</td>
+                                    <td>{{trade.trade_type}}</td>
+                                    <td>{{trade.trade_maturity}}</td>
+                                    <td>{{trade.trade_value}}</td>
+                                    <td class="description">Some stupid description</td>
+                                    
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    {% else %}
+                        <strong>There are no trades in the database</strong>
+                    {% endif %}
+                        
+                </table>
+                
+                
+            </div>
+            
+        </div>
+        
+     
+     
+    
+    <script src="{% static 'tradeviewer/myscript.js' %}"></script>
+        
+    </body>
+
+</html>
