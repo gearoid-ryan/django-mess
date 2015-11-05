@@ -1,5 +1,6 @@
 from django.db import models
-
+#from rest_framework import serializers
+#from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 # Create your models here.
 
 
@@ -11,3 +12,9 @@ class Trade(models.Model):
     
     def __str__(self):
         return str(self.trade_id)+":"+self.trade_type
+        
+    class Meta:
+        db_tablespace = "tables"
+        
+        
+
