@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'polls',
     'welcomeapp',
     'tradeviewer',
+    'rest_framework',
 ]
 
 

@@ -1,0 +1,5 @@
+from tradeviewer.serializers import TradeSerializer
+
+
+serializer = TradeSerializer()
+ print(repr(serializer))

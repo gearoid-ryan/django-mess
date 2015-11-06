@@ -1,10 +1,12 @@
 from django.db import models
-#from rest_framework import serializers
+
+
 #from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
 # Create your models here.
 
 
 class Trade(models.Model):
+    
     trade_id = models.IntegerField(default=0)
     trade_type = models.CharField(max_length=40)
     trade_maturity = models.DateTimeField('Maturity Date')
@@ -12,9 +14,7 @@ class Trade(models.Model):
     
     def __str__(self):
         return str(self.trade_id)+":"+self.trade_type
-        
-    class Meta:
-        db_tablespace = "tables"
+
         
         
 
